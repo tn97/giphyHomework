@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giphy Search!</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- Container to hold input form -->
+    <div class="container user-control">
+
+        <!-- form group to handle all the inputs -->
+        <form role="form">
+
+            <!-- text box to handle search terms -->
+            <div class="form-group">
+                <label for="search">Gif Search Term:</label>
+                <input type="text" class="form-control" id="search-term-input">
+            </div>
+
+            <!-- submit button -->
+            <button type="submit" class="btn search-btn" id="create-search-btn">
+                Search </button>
+
+        </form>
+        <div class="container btn-container">
+
+            <!-- clear gifs button -->
+            <button class="btn remove-gif-button" id="clear-gif">
+                Clear gifs</button>
+
+            <!-- clear all button -->
+            <button class="btn clear-all-btn" id="clear-all">
+                Clear Everything</button>
+
+        </div>
+
+    </div>
+
+    <!-- container to hold buttons -->
+    <div class="row">
+        <div class="col-sm-4">
+
+            <!-- div to append buttons to -->
+            <div class="btn-holder"></div>
+        </div>
+    </div>
+    <!-- row to handle the container for gifs -->
+    <div class="row">
+
+        <!-- container to handle the gifs -->
+        <div class="container" id="gif-div">
+
+
+        </div>
+    </div>
+    <!-- !!row THEN container!! -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>

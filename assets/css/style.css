@@ -1,0 +1,33 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.btn-container {
+    position: absolute;
+    top: 101px;
+    left: 470px;
+}
+
+.user-control {
+    background: rgb(119, 63, 194);
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+}
+
+label {
+    color: white;
+}
+
+.dynamicElement {
+    padding: 10px;
+}
+
+body {
+    background-color: #121212ad
+}
+
+.search-term-btn {
+    margin: 10px;
+}
