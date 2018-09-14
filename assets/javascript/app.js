@@ -6,7 +6,8 @@ var userBtn;
 var num = 0;
 
 // dynamically creates buttons with the input of the user
-$("#create-search-btn").on("click", function () {
+$(document).on("click", "#create-search-btn", function () {
+
     // Don't refresh the page :)
     event.preventDefault();
 
@@ -82,7 +83,7 @@ $(document).on("click", ".search-term-btn", function () {
             });
 
             // removes gifs and buttons
-            $("#clear-all").on("click", function() {
+            $("#clear-all").on("click", function () {
                 $(".search-term-btn").remove();
                 $(".item").remove();
             });
@@ -112,24 +113,39 @@ $(document).on("click", ".search-term-btn", function () {
 
             // Prepending the gifDiv to the #gif-div
             $("#gif-div").prepend(gifDiv);
-            // When clicked, the individual gif will animate
         }
-        $(".gif").on("click", function () {
 
-            // getting/setting the value of attributes on the html element
-            var state = $(this).attr("data-state");
-
-            // when clicked, if the image is still, it shall animate
-            // otherwise, vise versa
-            if (state === "still") {
-                $(this).attr("src", $(this).attr("data-animate"));
-                $(this).attr("data-state", "animate");
-            } else {
-                $(this).attr("src", $(this).attr("data-still"));
-                $(this).attr("data-state", "still");
-            }
-        });
+        attachListeners()
+        
     });
+        // When clicked, the individual gif will animate
+       
+   
+
+        
+        function attachListeners(){
+            $(".gif").on("click", function() {
+            
+                // getting/setting the value of attributes on the html element
+                var state = $(this).attr("data-state");
+    
+                // when clicked, if the image is still, it shall animate
+                // otherwise, vise versa
+                if (state === "still") {
+                    console.log('still')
+                    $(this).attr("src", $(this).attr("data-animate"));
+                    $(this).attr("data-state", "animate");
+                    return
+    
+                } else {
+                    console.log('else')
+                    $(this).attr("src", $(this).attr("data-still"));
+                    $(this).attr("data-state", "still");
+                return
+    
+                }
+            });
+        }
 
 })
 

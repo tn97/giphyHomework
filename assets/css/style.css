@@ -6,7 +6,7 @@ html, body {
 .btn-container {
     position: absolute;
     top: 101px;
-    left: 470px;
+    left: 30%;
 }
 
 .user-control {
